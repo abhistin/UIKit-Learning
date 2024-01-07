@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         vcLabel.text = firstVCString
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func goBackPressed(_ sender: UIButton) {

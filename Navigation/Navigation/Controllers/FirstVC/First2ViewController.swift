@@ -15,6 +15,7 @@ class First2ViewController: UIViewController {
         super.viewDidLoad()
         first2Label.text = first2String
         
+        
     }
     @IBAction func first2GoBtnPressed(_ sender: UIButton) {
         let first3VC = storyboard?.instantiateViewController(withIdentifier: "First3ViewController") as! First3ViewController
