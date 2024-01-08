@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S9I-hW-l0L">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="BYZ-38-t0r" customClass="SecondViewController" customModule="NavigationUsingDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter You Mail Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-Xt-vlI">
+                                <rect key="frame" x="133" y="174" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your mail id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPj-Ew-dll">
+                                <rect key="frame" x="20" y="275" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F32-Jb-xut">
+                                <rect key="frame" x="166" y="371" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uMO-UI-Vyt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hPj-Ew-dll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Q2-Km-rBj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPj-Ew-dll" secondAttribute="trailing" constant="20" id="9B1-UT-a7o"/>
+                            <constraint firstItem="ifC-Xt-vlI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fsq-zU-lka"/>
+                            <constraint firstItem="F32-Jb-xut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M5g-Md-oR3"/>
+                            <constraint firstItem="ifC-Xt-vlI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="RkB-CX-PFl"/>
+                            <constraint firstItem="hPj-Ew-dll" firstAttribute="top" secondItem="ifC-Xt-vlI" secondAttribute="bottom" constant="80" id="bjq-Zp-9iA"/>
+                            <constraint firstItem="F32-Jb-xut" firstAttribute="top" secondItem="hPj-Ew-dll" secondAttribute="bottom" constant="62" id="v9h-S2-5xI"/>
+                            <constraint firstItem="hPj-Ew-dll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vOb-1P-A4A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="hPj-Ew-dll" id="fUY-hL-KTs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="-673"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cTS-pa-yVH">
+            <objects>
+                <viewController id="dsc-AK-5Wq" customClass="ViewController" customModule="NavigationUsingDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFR-FB-g20">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1q-sT-cf9">
+                                <rect key="frame" x="111.66666666666669" y="103" width="170" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Click to Second VC"/>
+                                <connections>
+                                    <action selector="secondVCBtnPressed:" destination="dsc-AK-5Wq" eventType="touchUpInside" id="i0M-bg-lrg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Received from SecondVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alT-in-ido">
+                                <rect key="frame" x="79.666666666666686" y="208" width="234" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfW-PE-q3N">
+                                <rect key="frame" x="147" y="299" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cuc-A7-Cqj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1q-sT-cf9" firstAttribute="centerX" secondItem="WFR-FB-g20" secondAttribute="centerX" id="C1h-oN-r9O"/>
+                            <constraint firstItem="Y1q-sT-cf9" firstAttribute="top" secondItem="cuc-A7-Cqj" secondAttribute="top" id="Kue-CR-IVw"/>
+                            <constraint firstItem="SfW-PE-q3N" firstAttribute="centerX" secondItem="WFR-FB-g20" secondAttribute="centerX" id="Lxo-Fv-U31"/>
+                            <constraint firstItem="alT-in-ido" firstAttribute="centerX" secondItem="WFR-FB-g20" secondAttribute="centerX" id="jr1-Ok-PfU"/>
+                            <constraint firstItem="SfW-PE-q3N" firstAttribute="top" secondItem="alT-in-ido" secondAttribute="bottom" constant="70" id="qOe-bG-QOa"/>
+                            <constraint firstItem="alT-in-ido" firstAttribute="top" secondItem="Y1q-sT-cf9" secondAttribute="bottom" constant="70" id="vFG-R9-VYa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8bU-gJ-CmW"/>
+                    <connections>
+                        <outlet property="mailLabel" destination="SfW-PE-q3N" id="Ped-Qd-HPE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCn-Go-Sah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.39694656488541" y="-673.23943661971839"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zTY-ov-FTV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S9I-hW-l0L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xeo-5Z-gJM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dsc-AK-5Wq" kind="relationship" relationship="rootViewController" id="7hX-SA-pXM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khv-8n-4N4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118.32061068702289" y="-673.23943661971839"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
