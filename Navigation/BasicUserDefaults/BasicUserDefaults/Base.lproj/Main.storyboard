@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTw-P1-5t7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="c9n-Bl-9PE">
+            <objects>
+                <viewController id="kTw-P1-5t7" customClass="ViewController" customModule="BasicUserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V1i-mI-EXU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harper" translatesAutoresizingMaskIntoConstraints="NO" id="eMR-XO-0G1">
+                                <rect key="frame" x="116.66666666666669" y="161" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="aBS-fG-95C"/>
+                                    <constraint firstAttribute="width" constant="160" id="w8P-KA-t41"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="34p-pq-43S">
+                                <rect key="frame" x="30" y="99" width="333" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Xop-lK-ZXA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <color key="tintColor" red="0.35092192890000001" green="0.80254727599999998" blue="0.94894403220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="didChangeStyleSegmentedControl:" destination="kTw-P1-5t7" eventType="valueChanged" id="9BX-Km-KFx"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="igK-sn-btg" customClass="NameTextField" customModule="BasicUserDefaults" customModuleProvider="target">
+                                <rect key="frame" x="30" y="351" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SeQ-8F-u1t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-qQ-aAx" customClass="SAButton" customModule="BasicUserDefaults" customModuleProvider="target">
+                                <rect key="frame" x="30" y="421" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="e2v-N7-JQu"/>
+                                </constraints>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="kTw-P1-5t7" eventType="touchUpInside" id="7BY-Df-huL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JkX-cf-Kc5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eMR-XO-0G1" firstAttribute="centerX" secondItem="V1i-mI-EXU" secondAttribute="centerX" id="2wJ-Xh-tD3"/>
+                            <constraint firstItem="3ad-qQ-aAx" firstAttribute="leading" secondItem="V1i-mI-EXU" secondAttribute="leading" constant="30" id="3lS-29-QMP"/>
+                            <constraint firstItem="JkX-cf-Kc5" firstAttribute="trailing" secondItem="igK-sn-btg" secondAttribute="trailing" constant="30" id="5Vg-ov-ocn"/>
+                            <constraint firstItem="34p-pq-43S" firstAttribute="leading" secondItem="V1i-mI-EXU" secondAttribute="leading" constant="30" id="6Ss-oF-yZ0"/>
+                            <constraint firstItem="igK-sn-btg" firstAttribute="top" secondItem="eMR-XO-0G1" secondAttribute="bottom" constant="30" id="FaH-PS-o0L"/>
+                            <constraint firstAttribute="trailing" secondItem="34p-pq-43S" secondAttribute="trailing" constant="30" id="dN1-LH-p1t"/>
+                            <constraint firstItem="34p-pq-43S" firstAttribute="top" secondItem="JkX-cf-Kc5" secondAttribute="top" constant="40" id="eZ3-Au-NDp"/>
+                            <constraint firstItem="igK-sn-btg" firstAttribute="leading" secondItem="JkX-cf-Kc5" secondAttribute="leading" constant="30" id="eg1-0d-6p1"/>
+                            <constraint firstItem="eMR-XO-0G1" firstAttribute="top" secondItem="34p-pq-43S" secondAttribute="bottom" constant="30" id="kEc-c1-6Ls"/>
+                            <constraint firstItem="3ad-qQ-aAx" firstAttribute="top" secondItem="igK-sn-btg" secondAttribute="bottom" constant="20" id="qOR-ZG-2Nu"/>
+                            <constraint firstAttribute="trailing" secondItem="3ad-qQ-aAx" secondAttribute="trailing" constant="30" id="y6W-Uf-eQh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="igK-sn-btg" id="fRk-PA-wKy"/>
+                        <outlet property="petImageView" destination="eMR-XO-0G1" id="esj-Af-rL1"/>
+                        <outlet property="styleSegmentedControl" destination="34p-pq-43S" id="svT-DR-Uug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQ7-Wx-CgX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="-93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="harper" width="999.5" height="999.5"/>
+    </resources>
+</document>
