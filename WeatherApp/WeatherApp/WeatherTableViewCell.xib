@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherTableViewCell" rowHeight="20" id="KGk-i7-Jjw" customClass="WeatherTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdkjfbskjdbfkjsdbfkjsdnbfbkljs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qx-n5-Ng8">
+                        <rect key="frame" x="10" y="10" width="231.66666666666666" height="60"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="boY-3l-Ujk">
+                        <rect key="frame" x="292" y="12" width="60" height="57"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Tfy-V4-6nq"/>
+                            <constraint firstAttribute="height" constant="60" id="wTI-4P-PwF"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYe-Xg-Nmx">
+                        <rect key="frame" x="296" y="15" width="52" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="B76-5Z-6df"/>
+                            <constraint firstAttribute="width" constant="52" id="MqR-92-PVm"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="P4m-8H-ZdD"/>
+                            <constraint firstAttribute="height" constant="50" id="xXs-bR-gfc"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                        <connections>
+                            <action selector="favButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7uL-rt-jrd"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cYe-Xg-Nmx" secondAttribute="trailing" constant="14" id="2En-5Y-UAs"/>
+                    <constraint firstItem="cYe-Xg-Nmx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="5JU-k1-75j"/>
+                    <constraint firstAttribute="bottom" secondItem="cYe-Xg-Nmx" secondAttribute="bottom" constant="46" id="5nv-tv-3od"/>
+                    <constraint firstItem="6qx-n5-Ng8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BiA-um-88E"/>
+                    <constraint firstItem="boY-3l-Ujk" firstAttribute="top" secondItem="6qx-n5-Ng8" secondAttribute="top" id="CHF-ob-gSY"/>
+                    <constraint firstItem="boY-3l-Ujk" firstAttribute="bottom" secondItem="6qx-n5-Ng8" secondAttribute="bottom" id="GdK-eJ-8TX"/>
+                    <constraint firstAttribute="bottom" secondItem="6qx-n5-Ng8" secondAttribute="bottom" constant="10" id="S1v-ej-bI8"/>
+                    <constraint firstItem="6qx-n5-Ng8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZSS-Uj-Jxx"/>
+                    <constraint firstAttribute="trailing" secondItem="boY-3l-Ujk" secondAttribute="trailing" constant="10" id="lCk-lX-Zv0"/>
+                    <constraint firstAttribute="trailing" secondItem="cYe-Xg-Nmx" secondAttribute="trailing" constant="14" id="ufI-bJ-1dh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityLabel" destination="6qx-n5-Ng8" id="afh-ls-7Cc"/>
+                <outlet property="favImage" destination="boY-3l-Ujk" id="rPf-OA-Bz3"/>
+            </connections>
+            <point key="canvasLocation" x="135.87786259541986" y="41.197183098591552"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+    </resources>
+</document>

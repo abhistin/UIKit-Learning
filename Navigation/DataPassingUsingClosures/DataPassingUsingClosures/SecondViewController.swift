@@ -32,6 +32,7 @@ class SecondViewController: UIViewController {
         }
         guard let completionBlock = completion else {return}
         completionBlock(email)
+        
         navigationController?.popViewController(animated: true)
     }
 }

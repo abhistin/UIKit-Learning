@@ -8,27 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var city = City()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        let nib = UINib(nibName: "WeatherTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "WeatherTableViewCell")
+        
         tableView.reloadData()
         
         
     }
     
-    @IBAction func favouriteBtnClicked(_ sender: UIButton) {
-        
-        
-    }
-    func navigateToSecondVC() {
-        let secondVC = WeatherSecondViewController()
-        modalPresentationStyle = .fullScreen
-        present(secondVC, animated: true, completion: nil)
-        
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -37,31 +31,34 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = City.cities[indexPath.row].replacingOccurrences(of: "%20", with: " ")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell", for: indexPath) as! WeatherTableViewCell
+        let cityNames = City.cities[indexPath.row].replacingOccurrences(of: "%20", with: " ")
+        cell.setup(cityName: cityNames)
+        if City.isFavorite {
+            cell.favImage.image = UIImage(systemName: "heart")
+            City.isFavorite = !City.isFavorite
+        }
+        else {
+            cell.favImage.image = UIImage(systemName: "heart.fill")
+            City.isFavorite = !City.isFavorite
+        }
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
         let cityName = City.cities[indexPath.row]
-        City.networkCall(cityName: cityName) { cityWeatherObj, error in
-            
-            DispatchQueue.main.async {
-                let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "WeatherSecondViewController") as! WeatherSecondViewController
+        NetworkService.shared.networkCall(cityName: cityName) { success in
+            if success {
+                DispatchQueue.main.async {
+                    let secondVC = self.storyboard?.instantiateViewController(identifier: "WeatherSecondViewController") as! WeatherSecondViewController
+                    self.navigationController?.pushViewController(secondVC, animated: true)
+                }
                 
-                secondVC.cityName = "City Name: \(cityWeatherObj.name)"
-                secondVC.cityTemp = "City Weather: \(String(cityWeatherObj.main.temp))"
-                secondVC.cityHumidity = "City Humidity: \(String(cityWeatherObj.main.humidity))"
-                secondVC.cityWeatherDescription = "City Weather Description: \(cityWeatherObj.weather[0].description)"
-                secondVC.cityLat = "City Latitude: \(String(cityWeatherObj.coord.lat))"
-                secondVC.cityLon = "City Longitude: \(String(cityWeatherObj.coord.lon))"
-
-                self.navigationController?.pushViewController(secondVC, animated: true)
-//                secondVC.modalPresentationStyle = .fullScreen
-//                self.present(secondVC, animated: true)
             }
         }
     }

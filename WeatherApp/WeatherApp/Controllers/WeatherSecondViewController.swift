@@ -9,28 +9,44 @@ import UIKit
 
 class WeatherSecondViewController: UIViewController {
 
+    var cityWeather: CityWeather?
     @IBOutlet weak var cityNameLbl: UILabel!
     @IBOutlet weak var cityTempLbl: UILabel!
     @IBOutlet weak var cityHumidityLbl: UILabel!
     @IBOutlet weak var cityWeatherDescriptionLbl: UILabel!
     @IBOutlet weak var cityLatLbl: UILabel!
     @IBOutlet weak var cityLonLbl: UILabel!
-    var cityName: String! = nil
-    var cityTemp: String! = nil
-    var cityHumidity: String! = nil
-    var cityWeatherDescription: String! = nil
-    var cityLat: String! = nil
-    var cityLon: String! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityNameLbl.text = cityName
-        cityTempLbl.text = cityTemp
-        cityHumidityLbl.text = cityHumidity
-        cityWeatherDescriptionLbl.text = cityWeatherDescription
-        cityLatLbl.text = cityLat
-        cityLonLbl.text = cityLon
-        // Do any additional setup after loading the view.
         view.backgroundColor = .cyan
+        cityWeather = NetworkService.shared.getCityWeather()
+        updateCityWeather()
+        
     }
+    private func updateCityWeather() {
+
+            self.cityNameLbl.text = self.cityWeather?.name
+
+            if let temp = self.cityWeather?.main.temp {
+                self.cityTempLbl.text = String(temp)
+            }
+
+            if let humidity = self.cityWeather?.main.humidity {
+                self.cityHumidityLbl.text = String(humidity)
+            }
+
+            self.cityWeatherDescriptionLbl.text = self.cityWeather?.weather.first?.description
+
+            if let lat = self.cityWeather?.coord.lat {
+                self.cityLatLbl.text = String(lat)
+            }
+
+            if let lon = self.cityWeather?.coord.lon {
+                self.cityLonLbl.text = String(lon)
+            }
+
+    }
+
 
 }

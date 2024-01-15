@@ -8,6 +8,7 @@
 import Foundation
 
 struct City {
+    static var isFavorite: Bool = false
     static let cities = [
         "New%20York", "Los%20Angeles", "Chicago", "Houston", "Phoenix",
             "Philadelphia", "San%20Antonio", "San%20Diego", "Dallas", "San%20Jose",
@@ -33,28 +34,6 @@ struct City {
             "Northampton", "Portsmouth", "Warrington", "North%20Somerset", "Bury"
 
     ].sorted()
-    
-    static func networkCall(cityName: String, completion: @escaping (CityWeather , Error?) -> Void) {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=977499de1e4e4b101262614640525a32")
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: url!) { data, response, error in
-            guard let data = data else {
-                print("Error while getting data: \(error)")
-                
-                return
-            }
-            let decoder = JSONDecoder()
-            do {
-                let cityDecoderData = try decoder.decode(CityWeather.self, from: data)
-                completion(cityDecoderData, nil)
-            }
-            catch {
-                print("Error while decoding the data: \(error)")
-            }
-        }
-        dataTask.resume()
-    }
-
 }
 
 struct CityWeather: Codable {

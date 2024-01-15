@@ -18,6 +18,8 @@ class First3ViewController: UIViewController {
     }
 
     @IBAction func first3GoBtnPressed(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
+        let firstVC = navigationController?.viewControllers[1]
+        
+        navigationController?.popToViewController(firstVC!, animated: true)
     }
 }

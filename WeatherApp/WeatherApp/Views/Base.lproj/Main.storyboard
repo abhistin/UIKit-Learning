@@ -19,44 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DOS-zZ-vTd">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="74N-GN-zHx">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.333332061767578"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="74N-GN-zHx" id="7St-A5-AER">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.333332061767578"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnI-r5-Abp" userLabel="CityName">
-                                                    <rect key="frame" x="44.333333333333343" y="4" width="240.00000000000003" height="35.333333333333336"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="240" id="JfH-Wb-l20"/>
-                                                        <constraint firstAttribute="height" constant="35" id="Opg-gD-4Lv"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR5-yh-AoS" userLabel="FavouriteButton">
-                                                    <rect key="frame" x="333.33333333333331" y="4" width="50.666666666666686" height="35.333333333333336"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="favouriteBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXy-bE-B7t"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="nR5-yh-AoS" secondAttribute="bottom" constant="4" id="2BD-Iv-8kP"/>
-                                                <constraint firstAttribute="bottom" secondItem="vnI-r5-Abp" secondAttribute="bottom" constant="4" id="9XK-47-rPT"/>
-                                                <constraint firstItem="nR5-yh-AoS" firstAttribute="top" secondItem="7St-A5-AER" secondAttribute="top" constant="4" id="M5f-fQ-LHS"/>
-                                                <constraint firstAttribute="trailing" secondItem="nR5-yh-AoS" secondAttribute="trailing" constant="9" id="gNe-ya-Ly7"/>
-                                                <constraint firstItem="vnI-r5-Abp" firstAttribute="top" secondItem="7St-A5-AER" secondAttribute="top" constant="4" id="ubb-gO-0XS"/>
-                                                <constraint firstItem="nR5-yh-AoS" firstAttribute="leading" secondItem="vnI-r5-Abp" secondAttribute="trailing" constant="49" id="xvK-qG-iEb"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -127,12 +89,22 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWI-Qg-vSQ">
+                                <rect key="frame" x="159" y="516" width="75" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="makeFavButton:" destination="yK0-g1-Fbh" eventType="touchUpInside" id="tpN-k5-tPt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gha-P5-Kti"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="w0F-dd-6mZ" firstAttribute="leading" secondItem="gha-P5-Kti" secondAttribute="leading" constant="20" id="WP0-9l-JxF"/>
                             <constraint firstItem="w0F-dd-6mZ" firstAttribute="top" secondItem="gha-P5-Kti" secondAttribute="top" constant="100" id="bMu-rb-mB3"/>
+                            <constraint firstItem="YWI-Qg-vSQ" firstAttribute="centerX" secondItem="mGR-zx-tLU" secondAttribute="centerX" id="p3W-Gp-XDR"/>
+                            <constraint firstItem="YWI-Qg-vSQ" firstAttribute="top" secondItem="w0F-dd-6mZ" secondAttribute="bottom" constant="111.33" id="r2R-pB-xst"/>
                             <constraint firstItem="gha-P5-Kti" firstAttribute="trailing" secondItem="w0F-dd-6mZ" secondAttribute="trailing" id="yvV-Ns-dM7"/>
                         </constraints>
                     </view>
@@ -169,7 +141,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

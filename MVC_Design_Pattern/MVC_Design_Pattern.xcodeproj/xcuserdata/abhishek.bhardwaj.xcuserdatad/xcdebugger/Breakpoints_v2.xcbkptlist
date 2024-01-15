@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "24245E07-924B-4D0E-99DD-50C3E95F6E39"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59A0CA52-88C4-4F8D-BF60-29555CC9CE35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC_Design_Pattern/Controllers/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loginButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A59D677-A9CE-4E97-95AA-66ED0244C968"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC_Design_Pattern/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "networkCall(email:password:onVC:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A59D677-A9CE-4E97-95AA-66ED0244C968 - 479ce3c93561402e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MVC_Design_Pattern.NetworkService.networkCall(email: Swift.String, password: Swift.String, onVC: __C.UIViewController, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MVC_Design_Pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.bhardwaj/Documents/UIKit%20Learning/MVC_Design_Pattern/MVC_Design_Pattern/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "7A59D677-A9CE-4E97-95AA-66ED0244C968 - b063a4809ff2e786"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in MVC_Design_Pattern.NetworkService.networkCall(email: Swift.String, password: Swift.String, onVC: __C.UIViewController, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MVC_Design_Pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.bhardwaj/Documents/UIKit%20Learning/MVC_Design_Pattern/MVC_Design_Pattern/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "7A59D677-A9CE-4E97-95AA-66ED0244C968 - e70413ad7157370f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in MVC_Design_Pattern.NetworkService.networkCall(email: Swift.String, password: Swift.String, onVC: __C.UIViewController, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MVC_Design_Pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.bhardwaj/Documents/UIKit%20Learning/MVC_Design_Pattern/MVC_Design_Pattern/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "7A59D677-A9CE-4E97-95AA-66ED0244C968 - 467688029a1516cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in MVC_Design_Pattern.NetworkService.networkCall(email: Swift.String, password: Swift.String, onVC: __C.UIViewController, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "MVC_Design_Pattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhishek.bhardwaj/Documents/UIKit%20Learning/MVC_Design_Pattern/MVC_Design_Pattern/NetworkService/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE989C9C-9929-465B-9494-5B9194F9F8D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVC_Design_Pattern/NetworkService/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "networkCall(email:password:onVC:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
