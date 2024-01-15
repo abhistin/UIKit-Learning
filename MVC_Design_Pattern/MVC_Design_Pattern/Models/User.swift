@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 struct User {
     let firstName, lastName: String
     let age: Int
